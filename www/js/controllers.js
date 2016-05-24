@@ -2,10 +2,10 @@ angular.module('starter.controllers', [])
 
 .controller('DashCtrl', function($scope) {})
 
-.controller('ChatsCtrl', ['$http', 'Chats','$scope', function($http, Chats, $scope) {
+.controller('mealsController', ['$http', 'mealsService','$scope', function($http, mealsService, $scope) {
   $scope.index = function(){
-    Chats.all().then(function(response) {
-      $scope.chats = response.data;
+    mealsService.all().then(function(response) {
+      $scope.meals = response.data;
     });
   };
   $scope.index();

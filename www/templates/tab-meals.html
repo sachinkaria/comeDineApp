@@ -1,9 +1,10 @@
-<ion-view view-title="Chats">
+<ion-view view-title="Meals">
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="item-text-wrap">
-        <h2>{{chat.menu}}</h2>
-        <p>{{chat.date}}</p>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="meal in meals" type="item-text-wrap">
+        <h2>{{meal.menu}}</h2>
+        <p>{{meal.date}}</p>
+        <p>{{meal.places}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
 
         <ion-option-button class="button-assertive" ng-click="remove(chat)">
