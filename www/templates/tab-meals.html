@@ -1,21 +1,25 @@
-<ion-view view-title="Meals">
+<ion-view>
   <ion-content>
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search" ng-model="searchMeals">
+      </label>
+    </div>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="meal in meals" type="item-text-wrap">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="meal in meals | filter: searchMeals" type="item-text-wrap">
         <a id='meal-link' href="#/tab/tables/{{meal.table_id}}/meals/{{meal.id}}">
-        <h2>Menu: {{meal.menu}}</h2>
-        <p>Date: {{meal.date}}</p>
-        <p>Time: {{meal.time}}</p>
-        <p>Spaces Available: {{meal.places}}</p>
-        <p>Cuisine: {{meal.cuisine}}</p>
-        <p>Table: {{meal.table_id}}</p>
-        <p>Table: {{meal.id}}</p>
-        <i class="icon ion-chevron-right icon-accessory"></i>
+          <h2>Menu: {{meal.menu}}</h2>
+          <p>Date: {{meal.date}}</p>
+          <p>Time: {{meal.time}}</p>
+          <p>Spaces Available: {{meal.places}}</p>
+          <p>Cuisine: {{meal.cuisine}}</p>
+          <i class="icon ion-chevron-right icon-accessory"></i>
 
-        <ion-option-button class="button-assertive" ng-click="remove(chat)">
-          Delete
-        </ion-option-button>
-      </ion-item>
-    </ion-list>
-  </ion-content>
-</ion-view>
+          <ion-option-button class="button-assertive" ng-click="remove(chat)">
+            Delete
+          </ion-option-button>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-view>

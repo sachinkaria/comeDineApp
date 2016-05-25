@@ -18,8 +18,6 @@ angular.module('starter.controllers', [])
     });
   };
   $scope.show($stateParams.table_id,$stateParams.id);
-  console.log($stateParams.table_id,$stateParams.id);
-
 }])
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
