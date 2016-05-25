@@ -2,9 +2,13 @@
   "name": "comeDineApp",
   "app_id": "",
   "proxies": [
-    {
-      "path": "/tables",
-      "proxyUrl": "http://localhost:3000/"
-    }
-  ]
+      {
+          "path": "/meals",
+          "proxyUrl": "http://localhost:3000/"
+      },
+      {
+          "path": "/tables/:table_id/meals/:id",
+          "proxyUrl": "http://localhost:3000/tables/:table_id/meals/:id"
+      }
+    ]
 }

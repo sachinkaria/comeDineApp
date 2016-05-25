@@ -11,6 +11,17 @@ angular.module('starter.controllers', [])
   $scope.index();
 }])
 
+.controller('mealController', ['mealService','$scope', '$stateParams', function(mealService, $scope, $stateParams) {
+  $scope.show = function(table_id,id){
+    mealService.find(table_id,id).then(function(response) {
+      $scope.meal = response.data;
+    });
+  };
+  $scope.show($stateParams.table_id,$stateParams.id);
+  console.log($stateParams.table_id,$stateParams.id);
+
+}])
+
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
   $scope.chat = Chats.get($stateParams.chatId);
 })

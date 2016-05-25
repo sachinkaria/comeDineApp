@@ -2,9 +2,14 @@
   <ion-content>
     <ion-list>
       <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="meal in meals" type="item-text-wrap">
-        <h2>{{meal.menu}}</h2>
-        <p>{{meal.date}}</p>
-        <p>{{meal.places}}</p>
+        <a id='meal-link' href="#/tab/tables/{{meal.table_id}}/meals/{{meal.id}}">
+        <h2>Menu: {{meal.menu}}</h2>
+        <p>Date: {{meal.date}}</p>
+        <p>Time: {{meal.time}}</p>
+        <p>Spaces Available: {{meal.places}}</p>
+        <p>Cuisine: {{meal.cuisine}}</p>
+        <p>Table: {{meal.table_id}}</p>
+        <p>Table: {{meal.id}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
 
         <ion-option-button class="button-assertive" ng-click="remove(chat)">

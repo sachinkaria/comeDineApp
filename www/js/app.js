@@ -1,4 +1,4 @@
-comeDineApp = angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -52,6 +52,16 @@ comeDineApp = angular.module('starter', ['ionic', 'starter.controllers', 'starte
         }
       }
     })
+
+    .state('tab.meal', {
+  url: '/tables/:table_id/meals/:id',
+  views: {
+    'tab-meals': {
+      templateUrl: 'templates/meals/show.html',
+      controller: 'mealController'
+    }
+  }
+})
     .state('tab.chat-detail', {
       url: '/chats/:chatId',
       views: {
