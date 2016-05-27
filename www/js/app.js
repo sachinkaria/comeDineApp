@@ -57,7 +57,7 @@ var comeDineApp = angular.module('comeDineApp', ['ionic'])
     url: '/tables/:table_id/meals/:id',
     views: {
       'tab-meals': {
-        templateUrl: 'templates/meals/show.html',
+        templateUrl: 'templates/views/meals/show.html',
         controller: 'mealController'
       }
     }

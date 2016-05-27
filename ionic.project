@@ -9,6 +9,10 @@
       {
           "path": "/tables/:table_id/meals/:id",
           "proxyUrl": "http://localhost:3000/tables/:table_id/meals/:id"
+      },
+      {
+          "path": "/tables/:table_id",
+          "proxyUrl": "http://localhost:3000/tables/:table_id"
       }
     ]
 }
