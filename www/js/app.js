@@ -1,4 +1,6 @@
-var comeDineApp = angular.module('comeDineApp', ['ionic'])
+var comeDineApp = angular.module('comeDineApp', ['ionic',
+                                                  'ng-token-auth',
+                                                  'ngCookies'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -16,19 +18,38 @@ var comeDineApp = angular.module('comeDineApp', ['ionic'])
   });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.run(['$rootScope', '$state', function($rootScope, $state) {
+  $rootScope.$on('auth:login-success', function() {
+    console.log('GREAT SUCCESS');
+    $state.go('tab.meals');
+  });
+}])
 
-  // Ionic uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
-  // Set up the various states which the app can be in.
-  // Each state's controller can be found in controllers.js
+.config(function($stateProvider, $urlRouterProvider, $authProvider) {
+
   $stateProvider
+  //login screen
+  .state('home', {
+    url: '/',
+    templateUrl: 'templates/home.html',
+    controller: 'userSessionsController'
+  })
+    .state('user_sign_up', {
+    url: '/user/sign_up',
+    templateUrl: "/templates/views/users/new.html",
+    controller: 'userController'
+  })
 
   // setup an abstract state for the tabs directive
   .state('tab', {
     url: '/tab',
     abstract: true,
-    templateUrl: 'templates/tabs.html'
+    templateUrl: 'templates/tabs.html',
+    resolve: {
+      auth: function($auth) {
+        return $auth.validateUser();
+      }
+    }
   })
 
   // Each tab has its own nav history stack:
@@ -48,7 +69,7 @@ var comeDineApp = angular.module('comeDineApp', ['ionic'])
     views: {
       'tab-meals': {
         templateUrl: 'templates/tab-meals.html',
-        controller: 'mealsController'
+        controller: 'mealsController',
       }
     }
   })
@@ -62,6 +83,7 @@ var comeDineApp = angular.module('comeDineApp', ['ionic'])
       }
     }
   })
+
   .state('tab.chat-detail', {
     url: '/chats/:chatId',
     views: {
@@ -83,6 +105,10 @@ var comeDineApp = angular.module('comeDineApp', ['ionic'])
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/user/sign_up');
+
+  $authProvider.configure({
+  apiUrl: 'http://localhost:3000'
+});
 
 });
