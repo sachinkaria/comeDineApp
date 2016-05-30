@@ -102,10 +102,20 @@ var comeDineApp = angular.module('comeDineApp', ['ionic',
         controller: 'AccountCtrl'
       }
     }
+  })
+
+  .state('tab.new-table', {
+    url: '/account/new-table',
+    views: {
+      'tab-account': {
+        templateUrl: 'templates/views/tables/new.html',
+        controller: 'newTableController'
+      }
+    }
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/user/sign_up');
+  $urlRouterProvider.otherwise('/');
 
   $authProvider.configure({
   apiUrl: 'http://localhost:3000'
