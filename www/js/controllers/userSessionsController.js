@@ -1,4 +1,6 @@
-comeDineApp.controller('userSessionsController', ['$scope','$auth', function ($scope, $auth){
+comeDineApp.controller('userSessionsController', ['$scope','$auth',
+function ($scope, $auth){
+
   $scope.handleLoginBtnClick = function() {
    $auth.submitLogin($scope.loginForm)
      .then(function(resp) {
@@ -8,4 +10,5 @@ comeDineApp.controller('userSessionsController', ['$scope','$auth', function ($s
       console.log('nope.');
      });
   };
+
 }]);

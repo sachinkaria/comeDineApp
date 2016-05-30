@@ -99,7 +99,7 @@ var comeDineApp = angular.module('comeDineApp', ['ionic',
     views: {
       'tab-account': {
         templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+        controller: 'userProfileController'
       }
     }
   })

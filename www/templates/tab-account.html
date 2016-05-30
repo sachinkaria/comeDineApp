@@ -1,10 +1,14 @@
 <ion-view view-title="Account">
   <ion-content>
     <ion-list>
-    <ion-toggle  ng-model="settings.enableFriends">
-        Enable Friends
-    </ion-toggle>
+      <ion-item class="item-remove-animate" type="item-text-wrap">
+        <h2>Table: {{table.name}}</h2>
+      </ion-item>
     </ion-list>
-        <a id='Create a Table' href="#/tab/account/new-table">Create a Table</a>
+    <a id='Create a Table' href="#/tab/account/new-table">Create a Table</a>
+ <button id="sign-out" ng-click="signOut()" ng-show="user.id">Sign Out</button>
   </ion-content>
+
+
+
 </ion-view>
