@@ -12,7 +12,7 @@
       <h3>Meals I'm hosting</h3>
       <ion-item class="item-remove-animate" ng-repeat="meal in meals" type="item-text-wrap">
         <h2>Menu: {{meal.menu}}</h2>
-        <h2>Date: {{meal.date | amDateFormat:'dddd, Do MMMM YYYY'}}</h2>
+        <h2>Date: {{meal.date | amCalendar }}</h2>
         <h2>Time: {{meal.time | amDateFormat:'h:mm a'}}</h2>
       </ion-item>
     </div>

@@ -9,8 +9,8 @@
     <ion-list>
       <ion-item>
         <p>Menu: {{ meal.menu }}<p>
-        <p>Date: {{ meal.date }}<p>
-        <p>Time: {{ meal.time }}<p>
+          <p>Date: {{meal.date | amCalendar }} </p>
+          <p>Time: {{meal.time | amDateFormat:'h:mm a'}}</p>
       </ion-item>
     </ion-list>
   </ion-content>
