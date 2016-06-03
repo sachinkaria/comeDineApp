@@ -13,13 +13,13 @@
       <ion-item class="item-remove-animate" ng-repeat="meal in meals" type="item-text-wrap">
         <h2>Menu: {{meal.menu}}</h2>
         <h2>Date: {{meal.date}}</h2>
-        <h2>Time: {{meal.time}}</h2>
+        <h2>Time: {{meal.time }}</h2>
       </ion-item>
     </div>
     </ion-list>
     <a class="button button-outline button-positive button-full" id='Create a Table' href="#/tab/account/new-table">Open a Restaurant</a>
     <a class="button button-outline button-positive button-full" id='Create a Meal' href="#/tab/account/new-meal">Host a Meal</a>
- <button class="button button-assertive button-full" id="sign-out" ng-click="signOut()" ng-show="user.id">Sign Out</button>
+ <button class="button button-outline button-assertive button-full" id="sign-out" ng-click="signOut()" ng-show="user.id">Sign Out</button>
   </ion-content>
 
 
