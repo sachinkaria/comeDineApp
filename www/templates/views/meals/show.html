@@ -3,15 +3,15 @@
     <ion-list>
       <ion-item>
         <p>Venue: {{ table.name }}<p>
-        <p>Address: {{ table.street }}, {{table.city}}<p>
-      </ion-item>
-    </ion-list>
-    <ion-list>
-      <ion-item>
-        <p>Menu: {{ meal.menu }}<p>
-          <p>Date: {{meal.date | amCalendar }} </p>
-          <p>Time: {{meal.time | amDateFormat:'h:mm a'}}</p>
-      </ion-item>
-    </ion-list>
+          <p>Address: {{ table.street }}, {{table.city}}<p>
+          </ion-item>
+        </ion-list>
+        <ion-list>
+          <ion-item>
+            <p>Menu: {{ meal.menu }}<p>
+            <p>Date: {{meal.date | amCalendar }} </p>
+            <p>Time: {{meal.time | amDateFormat:'h:mm a'}}</p>
+          </ion-item>
+        </ion-list>
   </ion-content>
 </ion-view>
