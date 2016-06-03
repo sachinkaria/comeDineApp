@@ -1,19 +1,25 @@
 <ion-view view-title="Account">
   <ion-content>
     <ion-list>
+      <div class="text-center">
+      <h3>My Restaurant</h3>
       <ion-item class="item-remove-animate" type="item-text-wrap">
-        <h2>Table: {{table.name}}</h2>
+        <h2>{{table.name}}</h2>
       </ion-item>
     </ion-list>
 
     <ion-list>
+      <h3>Meals I'm hosting</h3>
       <ion-item class="item-remove-animate" ng-repeat="meal in meals" type="item-text-wrap">
-        <h2>Meal: {{meal.menu}}</h2>
+        <h2>Menu: {{meal.menu}}</h2>
+        <h2>Date: {{meal.date}}</h2>
+        <h2>Time: {{meal.time}}</h2>
       </ion-item>
+    </div>
     </ion-list>
-    <a id='Create a Table' href="#/tab/account/new-table">Create a Table</a>
-    <a id='Create a Meal' href="#/tab/account/new-meal">Create a Meal</a>
- <button class="button button-assertive" id="sign-out" ng-click="signOut()" ng-show="user.id">Sign Out</button>
+    <a class="button button-outline button-positive button-full" id='Create a Table' href="#/tab/account/new-table">Open a Restaurant</a>
+    <a class="button button-outline button-positive button-full" id='Create a Meal' href="#/tab/account/new-meal">Host a Meal</a>
+ <button class="button button-assertive button-full" id="sign-out" ng-click="signOut()" ng-show="user.id">Sign Out</button>
   </ion-content>
 
 

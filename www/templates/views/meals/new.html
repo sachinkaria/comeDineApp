@@ -1,28 +1,54 @@
 <ion-view view-title='Create Meal'>
   <ion-content class='padding'>
-    <form ng-submit="createMeal(meal)" role="form">
-      <input id="menu" placeholder="Menu" type="text" ng-model="meal.menu"/>
-      <input id="places" placeholder="Places Availible" type="number" ng-model="meal.places"/>
+    <div class="list list-inset">
+      <form ng-submit="createMeal(meal)" role="form">
+        <label class = "item item-input">
+          <input id="menu" class="item item-input" placeholder="Menu" type="text" ng-model="meal.menu"/>
+        </label>
 
-      <label class = "item item-input item-select">
-        <input id="date" placeholder="Date" type="date" ng-model="meal.date"/>
-      </label>
+        <div>
+          <label class = "item item-input item-select">
+            <div class = "input-label">
+              Spaces Availible
+            </div>
+            <select id="spaces" placeholder="Spaces Available" type="text" ng-model="meal.places">
+              <option value=1>1</option>
+              <option value=2>2</option>
+              <option value=3>3</option>
+              <option value=4>4</option>
+              <option value=5>5</option>
+              <option value=6>6</option>
+              <option value=7>7</option>
+              <option value=8>8</option>
+            </select>
+            <label>
+            </div>
 
-      <label class = "item item-input item-select">
-        <input id="time" placeholder="Time" type="time" ng-model="meal.time"/>
-      </label>
+        <label class = "item item-input item-select">
+          <input id="date" placeholder="Date" type="date" ng-model="meal.date"/>
+        </label>
 
-      <label class = "item item-input item-select">
-        <div class = "input-label">
-          Select
-        </div>
-        <select id="cuisine" placeholder="Cuisine" type="text" ng-model="meal.cuisine">
-          <option value="Indian">Indian</option>
-          <option value="English">English</option>
-        </select>
-      <label>
-      </br>
-          <button type="submit" class="btn btn-primary btn-lg">Create Meal</button>
+        <label class = "item item-input item-select">
+          <input id="time" placeholder="Time" type="time" ng-model="meal.time"/>
+        </label>
+
+        <div>
+          <label class = "item item-input item-select">
+            <div class = "input-label">
+              Cuisine
+            </div>
+            <select id="cuisine" placeholder="Cuisine" type="text" ng-model="meal.cuisine">
+              <option value="Indian">Indian</option>
+              <option value="English">English</option>
+            </select>
+            <label>
+            </div>
+          <button type="submit" class="button button-outline button-positive button-full">Create Meal</button>
+
         </form>
-      </ion-content>
-    </ion-view>
+        <form role="form">
+        <a type="submit" href="#/tab/account" class="button button-outline button-positive button-full">Back to Account</a>
+        <form>
+      </div>
+    </ion-content>
+  </ion-view>
