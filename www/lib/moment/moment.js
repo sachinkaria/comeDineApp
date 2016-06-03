@@ -2608,12 +2608,12 @@
     }
 
     var defaultCalendar = {
-        sameDay : '[Today at] LT',
-        nextDay : '[Tomorrow at] LT',
-        nextWeek : 'dddd [at] LT',
-        lastDay : '[Yesterday at] LT',
-        lastWeek : '[Last] dddd [at] LT',
-        sameElse : 'L'
+        sameDay : '[Today]',
+        nextDay : '[Tomorrow]',
+        nextWeek : 'dddd',
+        lastDay : '[Yesterday]',
+        lastWeek : '[Last] dddd',
+        sameElse : 'LLLL'
     };
 
     function locale_calendar__calendar (key, mom, now) {
@@ -2627,7 +2627,7 @@
         L    : 'MM/DD/YYYY',
         LL   : 'MMMM D, YYYY',
         LLL  : 'MMMM D, YYYY h:mm A',
-        LLLL : 'dddd, MMMM D, YYYY h:mm A'
+        LLLL : 'dddd, MMMM D, YYYY'
     };
 
     function longDateFormat (key) {

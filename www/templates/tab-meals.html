@@ -10,7 +10,7 @@
       <ion-item class="item-remove-animate item-icon-right" ng-repeat="meal in meals | filter: searchMeals" type="item-text-wrap">
         <a id='meal-link' href="#/tab/tables/{{meal.table_id}}/meals/{{meal.id}}">
           <h2>Menu: {{meal.menu}}</h2>
-          <p>Date: {{meal.date | amDateFormat:'dddd, Do MMMM YYYY'}}</h2></p>
+          <p>Date: {{meal.date | amCalendar }}</h2></p>
           <p>Time: {{meal.time | amDateFormat:'h:mm a'}}</p>
           <p>Spaces Available: {{meal.places}}</p>
           <p>Cuisine: {{meal.cuisine}}</p>
