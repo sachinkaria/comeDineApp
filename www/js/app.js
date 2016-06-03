@@ -1,6 +1,7 @@
 var comeDineApp = angular.module('comeDineApp', ['ionic',
                                                   'ng-token-auth',
-                                                  'ngCookies'])
+                                                  'ngCookies',
+                                                  'angularMoment'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
