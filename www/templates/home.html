@@ -1,5 +1,7 @@
 <ion-view view-title='Login'>
+  <div class="login">
   <ion-content class='padding'>
+
     <form ng-submit="submitLogin(loginForm)" role="form" ng-init="loginForm = {}">
       <div class="list">
         <label class="item item-input">
@@ -23,8 +25,10 @@
       </div>
 
 
-      <button type="submit" class="button button-balanced">Sign in</button>
+      <button type="submit" class="button button-balanced button-full">Sign in</button>
     </form>
-    <a class="button button-positive" id='sign-up' href="#/user/sign_up">Sign Up</a>
+    <a class="button button-positive button-full" id='sign-up' href="#/user/sign_up">Sign Up</a>
   </ion-content>
+</div>
+
 </ion-view>
