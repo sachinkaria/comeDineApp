@@ -112,6 +112,16 @@ var comeDineApp = angular.module('comeDineApp', ['ionic',
         controller: 'newTableController'
       }
     }
+  })
+
+  .state('tab.new-meal', {
+    url: '/account/new-meal',
+    views: {
+      'tab-account': {
+        templateUrl: 'templates/views/meals/new.html',
+        controller: 'newMealController'
+      }
+    }
   });
 
   // if none of the above states are matched, use this as the fallback

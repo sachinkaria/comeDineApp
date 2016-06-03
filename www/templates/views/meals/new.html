@@ -1,0 +1,28 @@
+<ion-view view-title='Create Meal'>
+  <ion-content class='padding'>
+    <form ng-submit="createMeal(meal)" role="form">
+      <input id="menu" placeholder="Menu" type="text" ng-model="meal.menu"/>
+      <input id="places" placeholder="Places Availible" type="number" ng-model="meal.places"/>
+
+      <label class = "item item-input item-select">
+        <input id="date" placeholder="Date" type="date" ng-model="meal.date"/>
+      </label>
+
+      <label class = "item item-input item-select">
+        <input id="time" placeholder="Time" type="time" ng-model="meal.time"/>
+      </label>
+
+      <label class = "item item-input item-select">
+        <div class = "input-label">
+          Select
+        </div>
+        <select id="cuisine" placeholder="Cuisine" type="text" ng-model="meal.cuisine">
+          <option value="Indian">Indian</option>
+          <option value="English">English</option>
+        </select>
+      <label>
+      </br>
+          <button type="submit" class="btn btn-primary btn-lg">Create Meal</button>
+        </form>
+      </ion-content>
+    </ion-view>

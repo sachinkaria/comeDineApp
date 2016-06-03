@@ -5,7 +5,14 @@
         <h2>Table: {{table.name}}</h2>
       </ion-item>
     </ion-list>
+
+    <ion-list>
+      <ion-item class="item-remove-animate" ng-repeat="meal in meals" type="item-text-wrap">
+        <h2>Meal: {{meal.menu}}</h2>
+      </ion-item>
+    </ion-list>
     <a id='Create a Table' href="#/tab/account/new-table">Create a Table</a>
+    <a id='Create a Meal' href="#/tab/account/new-meal">Create a Meal</a>
  <button class="button button-assertive" id="sign-out" ng-click="signOut()" ng-show="user.id">Sign Out</button>
   </ion-content>
 

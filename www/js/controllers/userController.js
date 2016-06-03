@@ -1,5 +1,5 @@
-comeDineApp.controller('userController', ['ipCookie','$scope', '$state', '$auth',
-  function(ipCookie, $scope, $state, $auth){
+comeDineApp.controller('userController', ['$scope', '$state', '$auth',
+  function($scope, $state, $auth){
 
     $scope.handleRegBtnClick = function() {
       $auth.submitRegistration($scope.registrationForm)
