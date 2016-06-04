@@ -18,8 +18,8 @@
       </ion-item>
     </div>
     </ion-list>
-    <a class="button button-outline button-positive button-full" id='Create a Table' href="#/tab/account/new-table">Open a Restaurant</a>
-    <a class="button button-outline button-positive button-full" id='Create a Meal' href="#/tab/account/new-meal">Host a Meal</a>
+    <a class="button button-outline button-positive button-full" ng-show="!tableExists" id='Create a Table' href="#/tab/account/new-table">Open a Restaurant</a>
+    <a class="button button-outline button-positive button-full" ng-show="tableExists" id='Create a Meal' href="#/tab/account/new-meal">Host a Meal</a>
  <button class="button button-outline button-assertive button-full" id="sign-out" ng-click="signOut()" ng-show="user.id">Sign Out</button>
   </ion-content>
 
