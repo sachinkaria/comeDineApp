@@ -1,41 +1,58 @@
-<ion-view view-title='SignUp'>
+<ion-view  hide-nav-bar="true" view-title='Register'>
+  <div class="login">
+
   <ion-content class='padding'>
-        <h2>SIGN UP HERE</h2>
-        <form ng-submit="submitRegistration(registrationForm)" role="form" ng-init="registrationForm = {}">
-            <!-- <input type="text"
-                   name="name"
-                   id="name"
-                   placeholder="Name"
-                   ng-model="registrationForm.name"
-                   required="required"
-                   class="form-control"/> -->
+    <img src="../img/logo.png" alt="dinewithme" class="logo">
+    <h2 class="dinewithme" >Dine With Me</h2>
 
-            <input type="email"
-                   name="email"
-                   id="email"
-                   placeholder="Email"
-                   ng-model="registrationForm.email"
-                   required="required"
-                   class="form-control"/>
+      <form ng-submit="submitRegistration(registrationForm)" role="form" ng-init="registrationForm = {}">
+        <div class="list">
 
-            <input type="password"
-                   name="password"
-                   id="password"
-                   placeholder="Password"
-                   ng-model="registrationForm.password"
-                   required="required"
-                   class="form-control"/>
+        <!-- <input type="text"
+        name="name"
+        id="name"
+        placeholder="Name"
+        ng-model="registrationForm.name"
+        required="required"
+        class="form-control"/> -->
+        <label class="item item-input">
+          <input type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+          ng-model="registrationForm.email"
+          required="required"
+          class="form-control"/>
+        </label>
 
-            <input type="password"
-                   name="password_confirmation"
-                   id="password_confirmation"
-                   placeholder="Confirm Password"
-                   ng-model="registrationForm.password_confirmation"
-                   required="required"
-                   class="form-control"/>
+        <label class="item item-input">
+          <input type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          ng-model="registrationForm.password"
+          required="required"
+          class="form-control"/>
+        </label>
 
-          <p><button type="submit" id='register' class="btn btn-primary btn-lg">Register</button></p>
-        </form>
-    </form>
+
+        <label class="item item-input">
+          <input type="password"
+          name="password_confirmation"
+          id="password_confirmation"
+          placeholder="Confirm Password"
+          ng-model="registrationForm.password_confirmation"
+          required="required"
+          class="form-control"/>
+        </label>
+      </div>
+
+
+        <button type="submit" id='register' class="button button-balanced button-full">Sign up</button>
+        <a class="button button-positive button-full" id='sign-in' href="#/home">Sign in</a>
+
+      </form>
   </ion-content>
+</div>
+
 </ion-view>

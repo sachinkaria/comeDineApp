@@ -1,17 +1,17 @@
 <ion-view>
   <ion-content>
-    <div class="list list-inset">
+    <div class="list">
       <label class="item item-input">
         <i class="icon ion-search placeholder-icon"></i>
         <input type="text" placeholder="Search" ng-model="searchMeals">
       </label>
     </div>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="meal in meals | filter: searchMeals" type="item-text-wrap">
+      <ion-item class="item-remove-animate item-icon-right" ng-repeat="meal in meals | filter: searchMeals" type="item-text-wrap">
         <a id='meal-link' href="#/tab/tables/{{meal.table_id}}/meals/{{meal.id}}">
           <h2>Menu: {{meal.menu}}</h2>
-          <p>Date: {{meal.date}}</p>
-          <p>Time: {{meal.time}}</p>
+          <p>Date: {{meal.date | amCalendar }}</p>
+          <p>Time: {{meal.time | amDateFormat:'h:mm a'}}</p>
           <p>Spaces Available: {{meal.places}}</p>
           <p>Cuisine: {{meal.cuisine}}</p>
           <i class="icon ion-chevron-right icon-accessory"></i>

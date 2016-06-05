@@ -1,12 +1,26 @@
-<ion-view view-title="Account">
+<ion-view hide-nav-bar="true" hide-back-button="true" >
   <ion-content>
     <ion-list>
+      <div class="text-center">
+      </br>
+      <h3>My Restaurant</h3>
       <ion-item class="item-remove-animate" type="item-text-wrap">
-        <h2>Table: {{table.name}}</h2>
+        <h2>{{table.name}}</h2>
       </ion-item>
     </ion-list>
-    <a id='Create a Table' href="#/tab/account/new-table">Create a Table</a>
- <button id="sign-out" ng-click="signOut()" ng-show="user.id">Sign Out</button>
+
+    <ion-list>
+      <h3>Meals I'm hosting</h3>
+      <ion-item class="item-remove-animate" ng-repeat="meal in meals" type="item-text-wrap">
+        <h2>Menu: {{meal.menu}}</h2>
+        <h2>Date: {{meal.date | amCalendar }}</h2>
+        <h2>Time: {{meal.time | amDateFormat:'h:mm a'}}</h2>
+      </ion-item>
+    </div>
+    </ion-list>
+    <a class="button button-outline button-positive button-full" ng-show="!tableExists" id='Create a Table' href="#/tab/account/new-table">Open a Restaurant</a>
+    <a class="button button-outline button-positive button-full" ng-show="tableExists" id='Create a Meal' href="#/tab/account/new-meal">Host a Meal</a>
+ <button class="button button-outline button-assertive button-full" id="sign-out" ng-click="signOut()" ng-show="user.id">Sign Out</button>
   </ion-content>
 
 

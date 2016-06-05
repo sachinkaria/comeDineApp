@@ -1,6 +1,7 @@
 var comeDineApp = angular.module('comeDineApp', ['ionic',
                                                   'ng-token-auth',
-                                                  'ngCookies'])
+                                                  'ngCookies',
+                                                  'angularMoment'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -110,6 +111,16 @@ var comeDineApp = angular.module('comeDineApp', ['ionic',
       'tab-account': {
         templateUrl: 'templates/views/tables/new.html',
         controller: 'newTableController'
+      }
+    }
+  })
+
+  .state('tab.new-meal', {
+    url: '/account/new-meal',
+    views: {
+      'tab-account': {
+        templateUrl: 'templates/views/meals/new.html',
+        controller: 'newMealController'
       }
     }
   });
