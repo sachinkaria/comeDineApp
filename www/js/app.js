@@ -2,7 +2,8 @@ var comeDineApp = angular.module('comeDineApp', ['ionic',
                                                   'ng-token-auth',
                                                   'ngCookies',
                                                   'angularMoment',
-                                                  'ion-floating-menu'])
+                                                  'ion-floating-menu',
+                                                  'ngCordova'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

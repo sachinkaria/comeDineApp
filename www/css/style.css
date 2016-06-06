@@ -28,3 +28,16 @@
   color: #2A1D00;
   border-color: #2A1D00;
 }
+
+.meals .meal-link {
+  text-align: left;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.scroll {
+    height: 100%;
+}

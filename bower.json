@@ -9,6 +9,8 @@
     "angular-cookies": "^1.5.6",
     "ng-cookies": "^1.1.1",
     "angular-moment": "^0.10.3",
-    "ion-floating-menu": "^1.0.1"
+    "ion-floating-menu": "^1.0.1",
+    "angular-google-maps": "^2.3.3",
+    "ngCordova": "^0.1.26-alpha"
   }
 }

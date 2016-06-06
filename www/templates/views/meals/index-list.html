@@ -12,12 +12,13 @@
     </div>
     <ion-list>
       <ion-item class="item-remove-animate item-icon-right meals" ng-repeat="meal in meals | filter: searchMeals" type="item-text-wrap">
-        <a id='meal-link' href="#/tab/tables/{{meal.table_id}}/meals/{{meal.id}}">
-          <h2>Menu: {{meal.menu}}</h2>
+        <button class='meal-link' href="#/tab/tables/{{meal.table_id}}/meals/{{meal.id}}">
+          <h2 class="menu-heading">Menu: {{meal.menu}}</h2>
           <p>{{meal.date | amCalendar }} at {{meal.time | amDateFormat:'h:mm a'}}</p>
           <p>Spaces Available: {{meal.places}}</p>
           <p>Cuisine: {{meal.cuisine}}</p>
           <i class="icon ion-chevron-right icon-accessory"></i>
+        </button>
         </ion-item>
       </ion-list>
     </ion-content>

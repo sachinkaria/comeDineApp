@@ -1,15 +1,16 @@
 <ion-view hide-nav-bar="true" hide-back-button="true">
   <a ng-href="#/tab/meals">
-  <ion-floating-button has-footer="true" button-color="#78C0A8" icon="ion-map" iconColor="#fff">
+  <ion-floating-button has-footer="true" button-color="#78C0A8" icon="ion-navicon" iconColor="#fff">
 </ion-floating-button>
 </a>
   <ion-content>
-    <div class="list">
+    <!-- <div class="list">
       <label class="item item-input">
         <i class="icon ion-search placeholder-icon"></i>
         <input type="text" placeholder="Search" ng-model="searchMeals">
       </label>
-    </div>
+    </div> -->
+    <div id="map" data-tap-disabled="true"></div>
 
     </ion-content>
   </ion-view>
