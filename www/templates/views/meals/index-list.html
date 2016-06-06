@@ -1,6 +1,8 @@
-<ion-view>
-  <ion-floating-button click="myEvent()" has-footer="true" button-color="#2AC9AA" icon="ion-map" iconColor="#fff">
+<ion-view hide-nav-bar="true" hide-back-button="true">
+  <a ng-href="#/tab/meals-map">
+  <ion-floating-button  has-footer="true" button-color="#78C0A8" icon="ion-map" iconColor="#fff">
 </ion-floating-button>
+</a>
   <ion-content>
     <div class="list">
       <label class="item item-input">
@@ -9,11 +11,10 @@
       </label>
     </div>
     <ion-list>
-      <ion-item class="item-remove-animate item-icon-right" ng-repeat="meal in meals | filter: searchMeals" type="item-text-wrap">
+      <ion-item class="item-remove-animate item-icon-right meals" ng-repeat="meal in meals | filter: searchMeals" type="item-text-wrap">
         <a id='meal-link' href="#/tab/tables/{{meal.table_id}}/meals/{{meal.id}}">
           <h2>Menu: {{meal.menu}}</h2>
-          <p>Date: {{meal.date | amCalendar }}</p>
-          <p>Time: {{meal.time | amDateFormat:'h:mm a'}}</p>
+          <p>{{meal.date | amCalendar }} at {{meal.time | amDateFormat:'h:mm a'}}</p>
           <p>Spaces Available: {{meal.places}}</p>
           <p>Cuisine: {{meal.cuisine}}</p>
           <i class="icon ion-chevron-right icon-accessory"></i>

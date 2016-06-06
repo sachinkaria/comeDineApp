@@ -18,3 +18,13 @@
   color: white;
   text-align: center;
 }
+
+.meals {
+  background-color: #FFFBF1;
+  border-color: #2A1D00;
+}
+
+.meals .ion-chevron-right {
+  color: #2A1D00;
+  border-color: #2A1D00;
+}

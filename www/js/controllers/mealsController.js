@@ -2,7 +2,6 @@ comeDineApp.controller('mealsController', ['$http', 'mealsService','$scope', fun
   $scope.index = function(){
     mealsService.all().then(function(response) {
       $scope.meals = response.data;
-      console.log(response.data);
     });
   };
   $scope.index();
