@@ -82,7 +82,7 @@ var comeDineApp = angular.module('comeDineApp', ['ionic',
     views: {
       'tab-meals': {
         templateUrl: 'templates/views/meals/index-map.html',
-        controller: 'mealsController',
+        controller: 'tablesController',
       }
     }
   })
