@@ -1,7 +1,9 @@
 var comeDineApp = angular.module('comeDineApp', ['ionic',
                                                   'ng-token-auth',
                                                   'ngCookies',
-                                                  'angularMoment'])
+                                                  'angularMoment',
+                                                  'ion-floating-menu',
+                                                  'ngCordova'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -69,8 +71,18 @@ var comeDineApp = angular.module('comeDineApp', ['ionic',
     url: '/meals',
     views: {
       'tab-meals': {
-        templateUrl: 'templates/tab-meals.html',
+        templateUrl: 'templates/views/meals/index-list.html',
         controller: 'mealsController',
+      }
+    }
+  })
+
+  .state('tab.meals-map', {
+    url: '/meals-map',
+    views: {
+      'tab-meals': {
+        templateUrl: 'templates/views/meals/index-map.html',
+        controller: 'tablesController',
       }
     }
   })

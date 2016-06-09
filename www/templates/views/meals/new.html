@@ -24,31 +24,42 @@
             <label>
             </div>
 
-        <label class = "item item-input item-select">
-          <input id="date" placeholder="Date" type="date" ng-model="meal.date"/>
-        </label>
+            <label class="item item-input">
+              <span class="input-label">Date</span>
+              <input type="date" ng-model="meal.date">
+            </label>
 
-        <label class = "item item-input item-select">
-          <input id="time" placeholder="Time" type="time" ng-model="meal.time"/>
-        </label>
+            <label class = "item item-input item-select">
+              <input id="time" placeholder="Time" type="time" ng-model="meal.time"/>
+            </label>
 
-        <div>
-          <label class = "item item-input item-select">
-            <div class = "input-label">
-              Cuisine
-            </div>
-            <select id="cuisine" placeholder="Cuisine" type="text" ng-model="meal.cuisine">
-              <option value="Indian">Indian</option>
-              <option value="English">English</option>
-            </select>
-            <label>
-            </div>
-          <button type="submit" class="button button-outline button-positive button-full">Create Meal</button>
+            <div>
+              <label class = "item item-input item-select">
+                <div class = "input-label">
+                  Cuisine
+                </div>
+                <select id="cuisine" placeholder="Cuisine" type="text" ng-model="meal.cuisine">
+                  <option value="Indian">Indian</option>
+                  <option value="English">English</option>
+                  <option value="Japanese">Japanese</option>
+                  <option value="Italian">Italian</option>
+                  <option value="Spanish">Spanish</option>
+                  <option value="Thai">Thai</option>
+                  <option value="Vietnamese">Vietnamese</option>
+                  <option value="African">African</option>
+                  <option value="Jamaican">Jamaican</option>
+                  <option value="Greek">Greek</option>
+                  <option value="Moroccan">Moroccan</option>
 
-        </form>
-        <form role="form">
-        <a type="submit" href="#/tab/account" class="button button-outline button-positive button-full">Back to Account</a>
-        <form>
-      </div>
-    </ion-content>
-  </ion-view>
+                </select>
+                <label>
+                </div>
+                <button type="submit" class="button button-outline button-positive button-full">Create Meal</button>
+
+              </form>
+              <form role="form">
+                <a type="submit" href="#/tab/account" class="button button-outline button-positive button-full">Back to Account</a>
+                <form>
+                </div>
+              </ion-content>
+            </ion-view>
