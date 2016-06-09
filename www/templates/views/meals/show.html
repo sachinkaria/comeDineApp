@@ -9,9 +9,32 @@
         <ion-list>
           <ion-item>
             <p>Menu: {{ meal.menu }}<p>
-            <p>Date: {{meal.date | amCalendar }} </p>
-            <p>Time: {{meal.time | amDateFormat:'h:mm a'}}</p>
-          </ion-item>
-        </ion-list>
+              <p>Date: {{meal.date | amCalendar }} </p>
+              <p>Time: {{meal.time | amDateFormat:'h:mm a'}}</p>
+            </ion-item>
+          </ion-list>
+
+          <div class="list list-inset" ng-show="!bookingSubmitted">
+            <form ng-submit="createBooking(booking)" role="form">
+              <label class = "item item-input">
+                <!-- <input id="meal_id" class="item item-input" placeholder="Meal_id" value = "{{meal.id}}" type="text" ng-model="booking.meal_id"/> -->
+              </label>
+              <div>
+                <label class = "item item-input item-select">
+                  <div class = "input-label">
+                    Spaces
+                  </div>
+                  <select id="spaces" placeholder="Spaces Available" type="text" ng-model="booking.spaces">
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                  </select>
+                  <label>
+                </div>
+              <button type="submit" class="button button-outline button-positive button-full">Make a Reservation</button>
+            </form>
+          </div>
+          <p ng-show="bookingSubmitted">Thank you for requesting a reservation! You will notified when {{table.name}} has confirmed your request</p>
   </ion-content>
 </ion-view>

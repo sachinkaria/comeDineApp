@@ -15,8 +15,6 @@ function($http, tablesService, $scope, $cordovaGeolocation, $ionicLoading, $ioni
     });
   };
 
-
-
   $ionicPlatform.ready(function() {
 
     var posOptions = {
@@ -81,7 +79,6 @@ function($http, tablesService, $scope, $cordovaGeolocation, $ionicLoading, $ioni
       console.log(err);
     });
   });
-
 
   $scope.index();
 

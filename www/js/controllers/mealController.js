@@ -1,4 +1,8 @@
-comeDineApp.controller('mealController', ['mealService','$scope', '$stateParams','tableService', function(mealService, $scope, $stateParams, tableService) {
+comeDineApp.controller('mealController', ['mealService','$scope', '$stateParams','tableService','newBookingService',
+function(mealService, $scope, $stateParams, tableService, newBookingService) {
+
+$scope.booking = {};
+$scope.bookingSubmitted = false;
 
   $scope.showmeal = function(table_id,id){
     mealService.find(table_id,id).then(function(response) {
@@ -9,6 +13,13 @@ comeDineApp.controller('mealController', ['mealService','$scope', '$stateParams'
   $scope.showtable = function(table_id){
     tableService.find(table_id).then(function(response) {
       $scope.table = response.data;
+    });
+  };
+
+  $scope.createBooking = function(booking){
+    $scope.booking.meal_id = $scope.meal.id;
+    newBookingService.create($scope.booking).then(function(){
+      $scope.bookingSubmitted = true;
     });
   };
 
