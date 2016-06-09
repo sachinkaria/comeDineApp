@@ -33,6 +33,7 @@ function($http, tablesService, $scope, $cordovaGeolocation, $ionicLoading, $ioni
       var mapOptions = {
         center: myLatlng,
         zoom: 11,
+        disableDefaultUI: true,
         mapTypeId: google.maps.MapTypeId.ROADMAP
       };
 

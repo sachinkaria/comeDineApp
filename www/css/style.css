@@ -31,6 +31,7 @@
 
 .meals .meal-link {
   text-align: left;
+  text-decoration: none;
 }
 
 #map {
@@ -44,4 +45,7 @@
 
 .list {
   margin-bottom: 1px;
+}
+
+.tab-nav {
 }
