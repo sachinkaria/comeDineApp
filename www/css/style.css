@@ -34,6 +34,17 @@
   text-decoration: none;
 }
 
+.information {
+  color: #2A1D00;
+  border-color: #2A1D00;
+  margin: 0px;
+  border-radius: 8px;
+}
+ /*table view styling*/
+.table-info-box {
+  padding-bottom: 2px;
+}
+
 #map {
     height: 100%;
     width: 100%;

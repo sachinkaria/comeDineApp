@@ -4,18 +4,18 @@
       <div class="text-center">
       </br>
       <h3>My Restaurant</h3>
-      <ion-item class="item-remove-animate" type="item-text-wrap">
+      <ion-item class=" meals information" type="item-text-wrap">
         <h2>{{table.name}}</h2>
         <h2>{{table.house_number}}, {{table.street}}, {{table.city}}, {{table.postcode}}</h2>
       </ion-item>
     </ion-list>
-
+</br>
     <ion-list>
       <h3>Meals I'm hosting</h3>
-      <ion-item class="item-remove-animate" ng-repeat="meal in meals" type="item-text-wrap">
+      <ion-item class="meals information" ng-repeat="meal in meals" type="item-text-wrap">
         <h2>Menu: {{meal.menu}}</h2>
-        <h2>Date: {{meal.date | amCalendar }}</h2>
-        <h2>Time: {{meal.time | amDateFormat:'h:mm a'}}</h2>
+        <h2>{{meal.date | amCalendar }} at {{meal.time | amDateFormat:'h:mm a'}}</h2>
+        <h2>Spaces: {{meal.places}}</h2>
       </ion-item>
     </div>
     </ion-list>

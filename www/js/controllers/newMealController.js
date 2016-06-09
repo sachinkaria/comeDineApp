@@ -15,7 +15,7 @@ function($scope, newMealService, $state, userProfileService){
   $scope.createMeal = function(meal,tableId){
     newMealService.create(meal,self.tableId)
     .then(function(){
-      $state.go('tab.account');
+      $state.go('tab.account', {}, { reload: true});
     });
   };
 
