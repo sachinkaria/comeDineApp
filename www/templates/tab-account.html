@@ -21,7 +21,16 @@
     <ion-list>
       <h3>My Pending Reservations</h3>
       <ion-item class="meals information" ng-repeat="booking in myPendingBookings" type="item-text-wrap">
-        <h2>Spaces: {{booking.spaces}}</h2> <h2>Status: {{booking.status}}</h2>
+        <h2>Spaces: {{booking.spaces}}</h2>
+        <h2>Status: {{booking.status}}</h2>
+      </ion-item>
+    </br>
+    </ion-list>
+    <ion-list>
+      <h3>My Confirmed Reservations</h3>
+      <ion-item class="meals information" ng-repeat="booking in myConfirmedBookings" type="item-text-wrap">
+        <h2>Spaces: {{booking.spaces}}</h2>
+        <h2>Status: {{booking.status}}</h2>
       </ion-item>
     </div>
     </ion-list>

@@ -40,21 +40,21 @@ function(userProfileService, $scope, $state, $auth, bookingsService){
       $scope.bookings = response.data;
     })
     .then(function(){
-      $scope.filterPendingBookings();
+      $scope.filterBookings();
     });
   };
 
-  $scope.filterPendingBookings = function(){
+  $scope.filterBookings = function(){
     console.log($scope.bookings);
-    var arrayLength = $scope.bookings.length
-    for (var i = 0; i < arrayLength; i++){
-      if($scope.bookings[i].user_id === $scope.currentUser.id)
-          {$scope.myPendingBookings.push($scope.bookings[i])};
-          console.log($scope.myPendingBookings);
+    var bookingsArrayLength = $scope.bookings.length
+    for (var i = 0; i < bookingsArrayLength; i++){
+      if($scope.bookings[i].user_id === $scope.currentUser.id && $scope.bookings[i].status === "unconfirmed")
+          {$scope.myPendingBookings.push($scope.bookings[i])}
+          else if($scope.bookings[i].user_id === $scope.currentUser.id && $scope.bookings[i].status === "confirmed")
+          {$scope.myConfirmedBookings.push($scope.bookings[i])};
+          };
       };
-    };
-
-  // $scope.filterPendingBookings();
+      
   $scope.showBookings();
   $scope.showTable();
   $scope.showMeals();
