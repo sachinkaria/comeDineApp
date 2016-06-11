@@ -6,8 +6,5 @@ comeDineApp.controller('mealsController', ['$http', 'mealsService','$scope','$co
       $scope.meals = response.data;
     });
   };
-
-
   $scope.index();
-
 }]);

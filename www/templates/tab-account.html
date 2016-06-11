@@ -2,7 +2,6 @@
   <ion-content>
     <ion-list>
       <div class="text-center">
-      </br>
       <h3>My Restaurant</h3>
       <ion-item class=" meals information" type="item-text-wrap">
         <h2>{{table.name}}</h2>
@@ -17,8 +16,17 @@
         <h2>{{meal.date | amCalendar }} at {{meal.time | amDateFormat:'h:mm a'}}</h2>
         <h2>Spaces: {{meal.places}}</h2>
       </ion-item>
+    </ion-list>
+  </br>
+    <ion-list>
+      <h3>My Pending Reservations</h3>
+      <ion-item class="meals information" ng-repeat="booking in myPendingBookings" type="item-text-wrap">
+        <h2>Spaces: {{booking.spaces}}</h2> <h2>Status: {{booking.status}}</h2>
+      </ion-item>
     </div>
     </ion-list>
+  </div>
+
     <a class="button button-outline button-positive button-full" ng-show="!tableExists" id='Create a Table' href="#/tab/account/new-table">Open a Restaurant</a>
     <a class="button button-outline button-positive button-full" ng-show="tableExists" id='Create a Meal' href="#/tab/account/new-meal">Host a Meal</a>
  <button class="button button-outline button-assertive button-full" id="sign-out" ng-click="signOut()" ng-show="user.id">Sign Out</button>
