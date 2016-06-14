@@ -1,0 +1,24 @@
+<ion-view hide-nav-bar="true" hide-back-button="true">
+  <a ng-href="#/tab/meals-map">
+  <ion-floating-button  has-footer="true" button-color="#78C0A8" icon="ion-map" iconColor="#fff">
+</ion-floating-button>
+</a>
+  <ion-content>
+    <div class="list">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Search" ng-model="searchTables">
+      </label>
+    </div>
+    <ion-list>
+      <ion-item class="item-remove-animate item-icon-right meals" ng-repeat="table in tables | filter: searchTables" type="item-text-wrap">
+        <a class='meal-link'>
+          <h2 class="menu-heading">{{table.name}}</h2>
+          <p>Location : {{table.street}}, {{table.city}}</p>
+          <p>Maximum Capacity: {{table.spaces}}</p>
+          <i class="icon ion-chevron-right icon-accessory"></i>
+        </a>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-view>

@@ -97,6 +97,16 @@ var comeDineApp = angular.module('comeDineApp', ['ionic',
     }
   })
 
+  .state('tab.tables', {
+    url: '/tables',
+    views: {
+      'tab-tables': {
+        templateUrl: 'templates/views/tables/index.html',
+        controller: 'tablesController',
+      }
+    }
+  })
+
   .state('tab.chat-detail', {
     url: '/chats/:chatId',
     views: {
