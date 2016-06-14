@@ -1,23 +1,29 @@
 <ion-view view-title='Meal Details'>
   <ion-content class='padding'>
     <div class = "table-info-box">
-    <ion-list>
-      <ion-item class="meals information">
-        <p>Venue: {{ table.name }}<p>
-          <p>Address: {{ table.street }}, {{table.city}}<p>
-          </ion-item>
-        </ion-list>
-      </div>
-        <div>
-        <ion-list>
-          <ion-item class="meals information">
-              <p>Menu: {{ meal.menu }}<p>
-              <p>{{meal.date | amCalendar }} at {{meal.time | amDateFormat:'h:mm a'}}</p>
-              <p>Spaces Available: {{meal.places}}</p>
-              <p>Cuisine: {{meal.cuisine}}</p>
+      <ion-list>
+        <ion-item class="meals information">
+          <p>Venue: {{ table.name }}<p>
+            <p>Address: {{ table.street }}, {{table.city}}<p>
+            </br>
+              <div ng-repeat="review in reviews">
+                <p>Hygiene: </p><rating ng-model="hygieneRating.rate" max="hygieneRating.max"></rating>
+                <p>Food: </p> <rating ng-model="foodRating.rate" max="foodRating.max"></rating>
+                <p>Atmosphere: </p> <rating ng-model="atmosphereRating.rate" max="atmosphereRating.max"></rating>
+              </div>
             </ion-item>
           </ion-list>
-        </br>
+        </div>
+        <div>
+          <ion-list>
+            <ion-item class="meals information">
+              <p>Menu: {{ meal.menu }}<p>
+                <p>{{meal.date | amCalendar }} at {{meal.time | amDateFormat:'h:mm a'}}</p>
+                <p>Spaces Available: {{meal.places}}</p>
+                <p>Cuisine: {{meal.cuisine}}</p>
+              </ion-item>
+            </ion-list>
+          </br>
           <div class="list list-inset" ng-show="!bookingSubmitted">
             <form ng-submit="createBooking(booking)" role="form">
               <div>
@@ -32,10 +38,10 @@
                     <option value=4>4</option>
                   </select>
                   <label>
-                </div>
-              <button type="submit" class="button button-outline button-positive button-full">Make a Reservation</button>
-            </form>
-          </div>
-          <p ng-show="bookingSubmitted">Thank you for requesting a reservation! You will notified when {{table.name}} has confirmed your request</p>
-  </ion-content>
-</ion-view>
+                  </div>
+                  <button type="submit" class="button button-outline button-positive button-full">Make a Reservation</button>
+                </form>
+              </div>
+              <p ng-show="bookingSubmitted">Thank you for requesting a reservation! You will notified when {{table.name}} has confirmed your request</p>
+            </ion-content>
+          </ion-view>

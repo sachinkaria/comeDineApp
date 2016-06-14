@@ -64,3 +64,13 @@
 .text-center {
   margin-top: 10px;
 }
+
+ul.rating li {
+  display: inline-block;
+  border: 0px;
+  background: none;
+  padding: 2px 3px;
+}
+ul.rating li i {
+  font-size: 20px;
+}
