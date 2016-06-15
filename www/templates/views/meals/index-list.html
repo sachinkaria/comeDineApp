@@ -4,7 +4,7 @@
 </ion-floating-button>
 </a>
   <ion-content>
-    <div class="list">
+    <div class="list" id="meals-index">
       <label class="item item-input">
         <i class="icon ion-search placeholder-icon"></i>
         <input type="text" placeholder="Search" ng-model="searchMeals">
@@ -12,8 +12,8 @@
     </div>
     <ion-list>
       <ion-item class="item-remove-animate item-icon-right meals" ng-repeat="meal in meals | filter: searchMeals" type="item-text-wrap">
-        <a class='meal-link' ng-href="#/tab/tables/{{meal.table_id}}/meals/{{meal.id}}">
-          <h2 class="menu-heading">Menu: {{meal.menu}}</h2>
+        <a class='meal-link' id="meal-link" ng-href="#/tab/tables/{{meal.table_id}}/meals/{{meal.id}}">
+          <h2 class="menu-heading" id="menu">Menu: {{meal.menu}}</h2>
           <p>{{meal.date | amCalendar }} at {{meal.time | amDateFormat:'h:mm a'}}</p>
           <p>Spaces Available: {{meal.places}}</p>
           <p>Cuisine: {{meal.cuisine}}</p>
